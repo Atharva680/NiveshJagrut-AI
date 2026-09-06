@@ -1,8 +1,8 @@
-# 🏛️ G4Jan Sunwai AI
+# 🏛️ NiveshJagrut-AI
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=30&duration=2800&pause=900&color=6C63FF&center=true&vCenter=true&width=850&lines=Turning+Citizen+Voices+into+Development+Intelligence;Multilingual+%7C+Geospatial+%7C+Evidence-Driven;From+Grassroots+Needs+to+Policy+Intelligence;Built+for+India's+Digital+Public+Infrastructure" alt="G4Jan Sunwai AI"/>
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=30&duration=2800&pause=900&color=6C63FF&center=true&vCenter=true&width=850&lines=Turning+Citizen+Voices+into+Development+Intelligence;Multilingual+%7C+Geospatial+%7C+Evidence-Driven;From+Grassroots+Needs+to+Policy+Intelligence;Built+for+India's+Digital+Public+Infrastructure" alt="NiveshJagrut-AI"/>
 
 <br/>
 
@@ -82,9 +82,9 @@ The deeper challenge is understanding:
 
 ---
 
-# 🎯 What G4Jan Sunwai AI Represents
+# 🎯 What NiveshJagrut-AI Represents
 
-G4Jan Sunwai AI is designed around a simple principle:
+NiveshJagrut-AI is designed around a simple principle:
 
 ```text
                     CITIZEN VOICE
@@ -158,7 +158,7 @@ POLICY BRIEF
 
 # 🧠 AI-Native Intelligence
 
-G4Jan Sunwai AI is not designed as a simple chatbot.
+NiveshJagrut-AI is not designed as a simple chatbot.
 
 AI is treated as an intelligence layer responsible for understanding complex human language and unstructured civic information.
 
@@ -181,7 +181,7 @@ AI is treated as an intelligence layer responsible for understanding complex hum
 
 India cannot be treated as a single-language environment.
 
-G4Jan Sunwai AI is designed around multilingual citizen participation.
+NiveshJagrut-AI is designed around multilingual citizen participation.
 
 Potential language coverage includes:
 
@@ -209,7 +209,7 @@ A citizen's problem does not exist in isolation.
 
 It exists somewhere.
 
-G4Jan Sunwai AI therefore considers the administrative and geographic hierarchy:
+NiveshJagrut-AI therefore considers the administrative and geographic hierarchy:
 
 ```text
 Citizen
@@ -420,7 +420,7 @@ It is to provide **traceable evidence**.
 
 Public-sector AI requires a higher standard of trust.
 
-G4Jan Sunwai AI considers:
+NiveshJagrut-AI considers:
 
 * Privacy
 * Data minimization
@@ -506,7 +506,7 @@ This repository follows a **production-grade engineering mindset**.
 
 # 📜 System Philosophy
 
-G4Jan Sunwai AI is built around five principles:
+NiveshJagrut-AI is built around five principles:
 
 ### 01 — Listen
 
@@ -643,7 +643,7 @@ Additional public-data sources may include:
 # 📂 Repository Structure
 
 ```text
-G4Jan Sunwai AI/
+NiveshJagrut-AI/
 │
 ├── apps/
 │   ├── web/
@@ -763,7 +763,7 @@ Authentication Events
 
 # 🌍 Digital Public Good Philosophy
 
-G4Jan Sunwai AI is envisioned with principles associated with public-interest technology:
+NiveshJagrut-AI is envisioned with principles associated with public-interest technology:
 
 ```text
 Open Standards
@@ -795,7 +795,7 @@ It is:
 
 > **"Can fragmented citizen signals reveal development needs that would otherwise remain difficult to see at scale?"**
 
-G4Jan Sunwai AI is built around that question.
+NiveshJagrut-AI is built around that question.
 
 ---
 
@@ -897,7 +897,7 @@ See the repository license for the exact terms.
 
 <div align="center">
 
-## **G4Jan Sunwai AI**
+## **NiveshJagrut-AI**
 
 ### *From Citizen Voices → Development Intelligence*
 
