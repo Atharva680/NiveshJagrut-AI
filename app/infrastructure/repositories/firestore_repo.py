@@ -1,4 +1,5 @@
 from google.cloud import firestore
+from typing import List, Optional
 from app.domain.models.citizen_request import CitizenRequest
 from app.domain.interfaces.citizen_repo import ICitizenRequestRepository
 from app.core.config.settings import settings

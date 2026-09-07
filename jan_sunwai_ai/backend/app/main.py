@@ -24,7 +24,7 @@ app.add_middleware(
 
 # Dependencies
 translation_service = MockTranslationService()
-speech_processor = MockSpeechProcessor(credentials_path=settings.GOOGLE_APPLICATION_CREDENTIALS)
+speech_processor = MockSpeechProcessor()
 feedback_service = FeedbackService(translation_service, speech_processor)
 analysis_engine = AnalysisEngine()
 

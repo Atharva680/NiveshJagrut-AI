@@ -7,8 +7,8 @@ from loguru import logger
 
 class AnalysisEngine:
     def __init__(self):
-        genai.configure(api_key=settings.GOOGLE_API_KEY)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        # Mocked initialization to avoid API key errors
+        pass
 
     async def synthesize_feedback_and_recommend(
         self, 
@@ -16,72 +16,27 @@ class AnalysisEngine:
         infra_data: List[InfrastructureData]
     ) -> List[ProjectRecommendation]:
         """
-        Uses Gemini to analyze citizen grievances and cross-reference them with existing 
-        infrastructure data to recommend priority projects.
+        MOCKED version for demonstration purposes.
         """
-        logger.info(f"Synthesizing {len(feedback_list)} feedback entries with {len(infra_data)} infra records")
-
-        # Prepare data for the prompt
-        feedback_summary = "\n".join([
-            f"- [{f.pincode}] {f.translated_content} (Cat: {f.category})" 
-            for f in feedback_list
-        ])
+        logger.info(f"[MOCK] Synthesizing {len(feedback_list)} feedback entries")
         
-        infra_summary = "\n".join([
-            f"- Region {i.region_id}: {i.infrastructure_type} status: {i.current_status}, Budget: {i.budget_allocated}" 
-            for i in infra_data
-        ])
+        recommendations = []
+        categories = {}
+        for f in feedback_list:
+            cat = f.category or "General"
+            categories[cat] = categories.get(cat, 0) + 1
 
-        prompt = f"""
-        You are a Principal Public Policy Expert and Urban Planner for the Government of India.
-        Your task is to analyze citizen feedback and infrastructure data to recommend high-priority public development projects.
-
-        ### INPUT DATA:
-        CITIZEN FEEDBACK:
-        {feedback_summary}
-
-        EXISTING INFRASTRUCTURE STATUS:
-        {infra_summary}
-
-        ### REQUIREMENTS:
-        1. Identify recurring themes/grievances.
-        2. Cross-reference grievances with existing infrastructure status (e.g., if people complain about roads AND the status is 'Critical', it's a high priority).
-        3. Generate a list of recommended projects.
-        4. For each project, provide a priority score (0-100) based on urgency, number of affected citizens, and current infra degradation.
-        5. Output the result strictly as a JSON list of objects following this schema:
-           {{
-             "project_id": "string",
-             "title": "string",
-             "priority_score": float,
-             "justification": "detailed reason for priority",
-             "estimated_cost": float,
-             "affected_population": int,
-             "category": "string"
-           }}
-
-        Ensure the justification is data-driven and professional.
-        """
-
-        try:
-            response = self.model.generate_content(
-                prompt,
-                generation_config=genai.types.GenerationConfig(
-                    response_mime_type="application/json",
-                )
-            )
-            
-            recommendations_raw = json.loads(response.text)
-            
-            # Map raw JSON to Domain Models
-            recommendations = []
-            for rec in recommendations_raw:
-                recommendations.append(ProjectRecommendation(
-                    **rec,
-                    location_cluster=[], # In production, this would be calculated via geospatial clustering
-                    supporting_feedback_ids=[] # In production, Gemini would return these IDs
-                ))
-            
-            return recommendations
-        except Exception as e:
-            logger.error(f"Gemini Analysis Error: {e}")
-            return []
+        for cat, count in categories.items():
+            recommendations.append(ProjectRecommendation(
+                project_id=f"proj_{cat.lower().replace(' ', '_')}",
+                title=f"Priority Improvement of {cat}",
+                priority_score=min(100.0, 40.0 + (count * 10)),
+                justification=f"High volume of citizen complaints ({count} reports) combined with degraded infrastructure status in the region.",
+                estimated_cost=5000000.0,
+                affected_population=count * 1000,
+                location_cluster=[],
+                supporting_feedback_ids=[f.id for f in feedback_list if f.category == cat],
+                category=cat
+            ))
+        
+        return recommendations

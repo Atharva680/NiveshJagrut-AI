@@ -3,6 +3,7 @@ from app.services.translation import ITranslationService
 from app.services.speech import ISpeechProcessor
 from loguru import logger
 import uuid
+from typing import Optional
 
 class FeedbackService:
     def __init__(self, translation_service: ITranslationService, speech_processor: ISpeechProcessor):
